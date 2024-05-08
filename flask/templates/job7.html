@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREER CONNECT</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <script src= "static/script.js"></script>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="{{url_for('index')}}" class="logo"><img src="static/images\logo.png"></a>
+            <div class="search-box">
+                <img src="static/images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                 <li><a href="{{url_for('index')}}" ><img src="static/images/home.png"><span>Home</span></a></li>
+                <li><a href="{{url_for('jobs')}}" class="active-link"><img src="static/images/jobs.png"><span>Jobs</span></a></li>
+                <li><a href="{{url_for('profile')}}"><img src="static/images/network.png"><span>Me</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="static/images\Harish Kumar.jpeg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="static\images\Harish Kumar.jpeg" >
+                    <div>
+                        <h3>Harish Kumar N</h3>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="{{ url_for('feedback') }}" class="profile-menu-link">
+                  <img src="static/images/feedback.png" />
+                  <p>Give Feedback</p>
+                  <span></span>
+                </a>
+                  <a href="{{ url_for('profile') }}" class="profile-menu-link">
+                    <img src="static/images/network.png" />
+                    <p>See Profile</p>
+                    <span></span>
+                  </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="static/images/cover-pic.png" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="static/images\Harish Kumar.jpeg">
+                    <h1>Harish Kumar N</h1>
+                    <h3>Data driven student with strong technical and business analytics skills</h3>
+                    <ul>
+                        <li>Your profile views<span>52</span></li>
+                        <li>Your post views<span>810</span></li>
+                        <li>Your connections views<span>205</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="static/images/items.png">My items</a>
+                    <a href="#"><img src="static/images/premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity" id="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href="#"><img src="static/images/recent.png">Web Development</a>
+                <a href="#"><img src="static/images/recent.png">User Interface</a>
+                <a href="#"><img src="static/images/recent.png">Online Learning</a>
+                <a href="#"><img src="static/images/recent.png">Learn Online</a>
+                <a href="#"><img src="static/images/recent.png">Code Better</a>
+                <a href="#"><img src="static/images/recent.png">Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href="#"><img src="static/images/group.png">Web Design Group</a>
+                <a href="#"><img src="static/images/group.png">HTML & CSS Learners</a>
+                <a href="#"><img src="static/images/group.png">Python & JavaScript Group</a>
+                <a href="#"><img src="static/images/group.png">Learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><img src="static/images/hashtag.png">wbdevelopment</a>
+                <a href="#"><img src="static/images/hashtag.png">userinterface</a>
+                <a href="#"><img src="static/images/hashtag.png">onlinelearning</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+            <p id="showMoreLink">Show more</p>
+        </div>
+        <div class="main-content">
+
+            <div class="sort-by">
+                <hr>
+                <p>Sort by: <span>top <img src="static/images/down-arrow.png"></span></p>
+            </div>
+            <div class="post">
+                <div class="post-author">
+                    <img src="static/images\sathy.jpeg">
+                    <div>
+                        <h1>Sathyanand V</h1>
+                        <small>MD at SMCS Groups | InnoVision Labs</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <div>
+                    <p style="line-height: 2;">We are seeking a talented and creative UX/UI Designer to join our design team. As a UX/UI Designer, you will play a crucial role in creating intuitive and visually appealing user experiences for our digital products. The ideal candidate will have a strong understanding of user-centered design principles, a keen eye for aesthetics, and the ability to translate complex requirements into user-friendly interfaces.</p>
+                    <p><b>RESPONSIBILITIES :</b></p><Br>
+                    <ul>
+                        <li>Collaborate with cross-functional teams to understand project requirements and user needs.</li><Br>
+                        <li>Conduct user research, interviews, and usability testing to gather insights for design decisions.</li><Br>
+                        <li>Create wireframes, prototypes, and high-fidelity designs to communicate design concepts.</li><Br>
+                        <li>Develop and maintain design systems, ensuring consistency across all digital platforms.</li><Br>
+                        <li>Iterate on designs based on feedback, user testing, and usability findings.</li><Br>
+                        <li>Work closely with developers to ensure seamless implementation of designs.</li><Br>
+                        <li>Stay updated on industry trends and emerging design technologies.</li><Br>
+                    </ul><Br>
+            
+                    <p><b> REQUIREMENTS :</b></p><Br>
+                    <ul>
+                        <li>Bachelor's or Master's degree in Design, Human-Computer Interaction, or a related field.</li><Br>
+                        <li>Proven experience as a UX/UI Designer with a strong portfolio showcasing design projects.</li><Br>
+                        <li>Proficiency in design and prototyping tools such as Sketch, Figma, Adobe XD, or similar.</li><Br>
+                        <li>Strong understanding of user-centered design principles and best practices.</li><Br>
+                        <li>Excellent visual design skills with a keen eye for detail.</li><Br>
+                        <li>Ability to create wireframes, user flows, and interactive prototypes.</li><Br>
+                    </ul>
+                    <BR>
+                        <style>
+                            .form {
+                                background-color: #ffffff;
+                                border-radius: 20px;
+                                box-sizing: border-box;
+                                height: 790px;
+                                padding: 20px;
+                                width: 700px;
+                                display: inline-block;
+                                text-align: left;
+                                margin: 0 auto;
+                            }
+                    
+                            .title {
+                                color: #eee;
+                                font-family: sans-serif;
+                                font-size: 25px;
+                                font-weight: 600;
+                                margin-top: 30px;
+                            }
+                    
+                            .input-container {
+                                height: 40px;
+                                position: relative;
+                                width: 100%;
+                                margin-top: 30px;
+                            }
+                    
+                            .input {
+                                background-color: #cccccc;
+                                border-radius: 12px;
+                                border: 0;
+                                box-sizing: border-box;
+                                color: #060606;
+                                font-size: 18px;
+                                height: 100%;
+                                outline: 0;
+                                padding: 4px 20px 0;
+                                width: 100%;
+                            }
+                    
+                            .cut {
+                                background-color: #ffffff;
+                                border-radius: 10px;
+                                height: 20px;
+                                left: 20px;
+                                position: absolute;
+                                top: -20px;
+                                transform: translateY(0);
+                                transition: transform 200ms;
+                                width: 76px;
+                            }
+                    
+                            .cut-short {
+                                width: 50px;
+                            }
+                    
+                            .input:focus~.cut,
+                            .input:not(:placeholder-shown)~.cut {
+                                transform: translateY(8px);
+                            }
+                    
+                            .placeholder {
+                                color: #65657b;
+                                font-family: sans-serif;
+                                left: 20px;
+                                line-height: 14px;
+                                pointer-events: none;
+                                position: absolute;
+                                transform-origin: 0 50%;
+                                transition: transform 200ms, color 200ms;
+                                top: 20px;
+                            }
+                    
+                            .input:focus~.placeholder,
+                            .input:not(:placeholder-shown)~.placeholder {
+                                transform: translateY(-30px) translateX(10px) scale(0.75);
+                            }
+                    
+                            .input:not(:placeholder-shown)~.placeholder {
+                                color: #808097;
+                            }
+                    
+                            .input:focus~.placeholder {
+                                color: #dc2f55;
+                            }
+                    
+                            .submit,
+                            .reset {
+                                background-color: #08d;
+                                border-radius: 12px;
+                                border: 0;
+                                box-sizing: border-box;
+                                color: #eee;
+                                cursor: pointer;
+                                font-size: 18px;
+                                height: 50px;
+                                margin-top: 38px;
+                                width: 100%;
+                            }
+                    
+                            .submit:active,
+                            .reset:active {
+                                background-color: #06b;
+                            }
+                        </style>
+                    </head>
+                    
+                    <body>
+                        <div class="form">
+                            <div class="section-header">
+                                <h2>ENTER YOUR PERSONAL INFORMATION</h2>
+                            </div>
+                            <div class="input-container">
+                                <input id="name" class="input" type="text" placeholder=" " required>
+                                <div class="cut"></div>
+                                <label for="name" class="placeholder">Name</label>
+                                <div class="validation-message" id="nameErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="age" class="input" type="number" placeholder=" " required>
+                                <div class="cut"></div>
+                                <label for="age" class="placeholder">Age</label>
+                                <div class="validation-message" id="ageErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="gender" class="input" type="text" placeholder=" " required>
+                                <div class="cut cut-short"></div>
+                                <label for="gender" class="placeholder">Gender</label>
+                                <div class="validation-message" id="genderErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="phone" class="input" type="tel" placeholder=" " required>
+                                <div class="cut cut-short"></div>
+                                <label for="phone" class="placeholder">Phone No</label>
+                                <div class="validation-message" id="phoneErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="maritalStatus" class="input" type="text" placeholder=" " required>
+                                <div class="cut cut-short"></div>
+                                <label for="maritalStatus" class="placeholder">Marital Status</label>
+                                <div class="validation-message" id="maritalStatusErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="email" class="input" type="text" placeholder=" " required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                                <div class="cut cut-short"></div>
+                                <label for="email" class="placeholder">Email</label>
+                                <div class="validation-message" id="maritalStatusErrorMessage"></div>
+                            </div>
+                            <div class="input-container">
+                                <input id="experience" class="input" type="number" placeholder=" " required>
+                                <div class="cut cut-short"></div>
+                                <label for="experience" class="placeholder">Years of Experience</label>
+                                <div class="validation-message" id="experienceErrorMessage"></div>
+                            </div>
+                            <BR>
+                            <BR>
+                            <div id="ageErrorMessage" style="color: red; display: none;">Oops! Age must be between 22 and 55.</div>
+                            <BR>
+                            <BR>
+                            <form id="resumeUploadForm" action="process_resume_upload.php" method="post" enctype="multipart/form-data">
+                                <label for="resumeFile" id="uploadButton">Upload Your Resume (PDF only)</label>
+                                <input type="file" id="resumeFile" name="resumeFile" accept=".pdf" required>
+                                <button type="button" onclick="uploadResume()">Upload</button>
+                            </form>
+                            <button type="button" class="submit" id="submitButton" disabled onclick="validateForm()">Submit</button>
+                        
+                            <div id="uploadSuccessMessage" style="color: green; display: none;">
+                                <br>Thank you! We will validate your resume and notify you via the registered email.
+                            </div>
+                            <br><br>
+                            <p style = "font-size: larger;">As a next step, please take a quick multiple-choice question test:</p>
+                            <p style="text-align: center; font-size: 24px;"><a href="{{ url_for('quiz')}}" style="color: green;">Start Quiz</a></p>
+
+
+                        </div>
+                        
+                        <!-- Your existing JavaScript code -->
+                        <script>
+                            // Validate age and enable/disable submit button
+                            document.getElementById('age').addEventListener('input', function () {
+                                var age = parseInt(this.value);
+                                var ageErrorMessage = document.getElementById('ageErrorMessage');
+                        
+                                if (!isNaN(age) && age >= 22 && age <= 55) {
+                                    ageErrorMessage.style.display = 'none';
+                                } else {
+                                    ageErrorMessage.style.display = 'block';
+                                }
+                                enableSubmitButton();
+                            });
+                        
+                            // Validate other inputs and enable/disable submit button
+                            var inputFields = ['name', 'gender', 'phone', 'maritalStatus', 'experience'];
+                            inputFields.forEach(function (fieldId) {
+                                document.getElementById(fieldId).addEventListener('input', function () {
+                                    validateField(fieldId);
+                                    enableSubmitButton();
+                                });
+                            });
+                        
+                            // Enable/disable submit button based on form validation
+                            function enableSubmitButton() {
+                                var submitButton = document.getElementById('submitButton');
+                                var isFormValid = true;
+                        
+                                // Check if all input fields are filled
+                                inputFields.forEach(function (fieldId) {
+                                    var fieldValue = document.getElementById(fieldId).value;
+                                    if (fieldValue.trim() === '') {
+                                        isFormValid = false;
+                                        document.getElementById(fieldId + 'ErrorMessage').innerText = 'Please fill this field.';
+                                    } else {
+                                        document.getElementById(fieldId + 'ErrorMessage').innerText = '';
+                                    }
+                                });
+                        
+                                // Check if age is valid
+                                var age = parseInt(document.getElementById('age').value);
+                                if (isNaN(age) || age < 22 || age > 55) {
+                                    isFormValid = false;
+                                    document.getElementById('ageErrorMessage').innerText = 'Oops! Age must be between 22 and 55.';
+                                } else {
+                                    document.getElementById('ageErrorMessage').innerText = '';
+                                }
+                        
+                                // Enable/disable submit button
+                                submitButton.disabled = !isFormValid;
+                            }
+                        
+                            // Show success message after uploading resume
+                            function uploadResume() {
+                                // Assuming the upload is successful, you can customize this logic based on your actual implementation
+                                var uploadSuccessMessage = document.getElementById('uploadSuccessMessage');
+                                uploadSuccessMessage.style.display = 'block';
+                        
+                                // You may also want to reset the form or perform other actions here
+                                // For example, you can reset the form after displaying the success message:
+                                // document.getElementById('resumeUploadForm').reset();
+                            }
+                        
+                            // File upload display logic
+                            $('#resumeFile').bind('change', function () {
+                                var filename = $("#resumeFile").val();
+                                var fileUploadContainer = $(".file-upload");
+                                var noFileElement = $("#noFile");
+                        
+                                if (/^\s*$/.test(filename)) {
+                                    fileUploadContainer.removeClass('active');
+                                    noFileElement.text("No file chosen...");
+                                } else {
+                                    fileUploadContainer.addClass('active');
+                                    noFileElement.text(filename.replace("C:\\fakepath\\", ""));
+                                }
+                                enableSubmitButton();
+                            });
+                        
+                            // Validate the entire form before submission
+                            function validateForm() {
+                                inputFields.forEach(function (fieldId) {
+                                    validateField(fieldId);
+                                });
+                                enableSubmitButton();
+                            }
+                            function redirectToQuestionPage() {
+                              // Assuming you have a separate HTML page for the question test
+                              window.location.href = 'question_page.html'; // Update the URL accordingly
+                                 }
+                        </script>                        
+                        
+                            
+                        
+                </body>        
+                        
+                            
+                        
+            </div>
+        </div>
+        </div>
+        
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="static/images/more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#">Careers growing horizontally too</a>
+                <span>19h ago &middot; 1,552 readers</span>
+
+                <a href="#">Less work visa for US,more for UK</a>
+                <span>1d ago &middot; 27,290 readers</span>
+
+                <a href="#">More hiring = higher confidence?</a>
+                <span>18h ago &middot; 8,934 readers</span>
+
+                <a href="#">Gautham Adani is the world's third richest</a>
+                <span>12h ago &middot; 4,205 readers</span>
+
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="static/images\Harish Kumar.jpeg">
+                    <img src="static/images/mi-logo.png">
+                </div>
+                <b>Brand and Demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src="static/images/logo.png">
+                    <p>Career Connect &#169; 2023. All right reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let profileMenu=document.getElementById("profileMenu");
+        function toggleMenu(){
+            profileMenu.classList.toggle("open-menu")
+        }
+    </script>
+
+</body>
+</html>
+
+
+<style>
+    .personal-info-form {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .personal-info-form label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .personal-info-form input,
+    .personal-info-form button,
+    .personal-info-form select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .personal-info-form input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    .personal-info-form button {
+        background-color: #0077b5;
+        color: #fff;
+        cursor: pointer;
+    }
+    .gender-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .gender-label {
+        margin-right: 10px;
+    }
+    .gender-container label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .resumeUploadForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .uploadButton {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #0077b5;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        width: 150px; /* Set your desired width */
+        height: 40px; /* Set your desired height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .resumeFile {
+        display: none;
+    }
+</style>
+

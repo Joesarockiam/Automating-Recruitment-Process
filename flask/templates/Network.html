@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAREER CONNECT</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <script src= "static\script.js"></script>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="{{url_for('index')}}" class="logo"><img src="static/images/logo.png"></a>
+            <div class="search-box">
+                <img src="static/images/search.png">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="{{url_for('index')}}" ><img src="static/images/home.png"><span>Home</span></a></li>
+                <li><a href="{{url_for('jobs')}}" class="active-link"><img src="static/images/jobs.png"><span>Jobs</span></a></li>
+                <li><a href="{{url_for('profile')}}"><img src="static/images/network.png"><span>Me</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="static/images\Harish Kumar.jpeg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="static/images\Harish Kumar.jpeg" >
+                    <div>
+                        <h3>Harish Kumar N</h3>
+                        
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="static/images/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="static/images/setting.png">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="static/images/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="static/images/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                <a href="#" class="profile-menu-link">
+                    <img src="static/images/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--navbar close-->
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="static/images/cover-pic.png" width="100%">
+                <div class="sidebar-profile-info">
+                    <img src="static/images\Harish Kumar.jpeg">
+                    <h1>Harish Kumar N</h1>
+                    <h3>Data driven student with strong technical and business analytics skills</h3>
+                    <ul>
+                        <li>Your profile views<span>52</span></li>
+                        <li>Your post views<span>810</span></li>
+                        <li>Your connections views<span>205</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-profile-link">
+                    <a href="#"><img src="static/images/items.png">My items</a>
+                    <a href="#"><img src="static/images/premium.png">Try Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-activity" id="sidebar-activity">
+                <h3>RECENT</h3>
+                <a href="#"><img src="static/images/recent.png">Web Development</a>
+                <a href="#"><img src="static/images/recent.png">User Interface</a>
+                <a href="#"><img src="static/images/recent.png">Online Learning</a>
+                <a href="#"><img src="static/images/recent.png">Learn Online</a>
+                <a href="#"><img src="static/images/recent.png">Code Better</a>
+                <a href="#"><img src="static/images/recent.png">Group Learning</a>
+                <h3>GROUPS</h3>
+                <a href="#"><img src="static/images/group.png">Web Design Group</a>
+                <a href="#"><img src="static/images/group.png">HTML & CSS Learners</a>
+                <a href="#"><img src="static/images/group.png">Python & JavaScript Group</a>
+                <a href="#"><img src="static/images/group.png">Learn Coding Online</a>
+                <h3>HASHTAG</h3>
+                <a href="#"><img src="static/images/hashtag.png">wbdevelopment</a>
+                <a href="#"><img src="static/images/hashtag.png">userinterface</a>
+                <a href="#"><img src="static/images/hashtag.png">onlinelearning</a>
+                <div class="discover-more-link">
+                    <a href="#">Discover more</a>
+                </div>
+            </div>
+            <p id="showMoreLink">Show more</p>
+        </div>
+        <div class="main-content">
+
+            <div class="create-post">
+                <div class="create-post-input">
+                    <img src="static/images\Harish Kumar.jpeg">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create-post-links">
+                    <li><img src="static/images/photo.png">Photo</li>
+                    <li><img src="static/images/video.png">Video</li>
+                    <li><img src="static/images/event.png">Event</li>
+                    <li>Post</li>
+                </div>
+            </div>
+            <div class="sort-by">
+                <div class="dropdown-container">
+                    <div class="dropdown">
+                        <span>Choose Domain</span>
+                        <div class="dropdown-content">
+                            <a href="{{url_for('Software')}}">Software</a><br>
+                            <a href="{{url_for('Data')}}">Data Science</a><br>
+                            <a href="{{url_for('Network')}}">Network</a><br>
+                            <a href="{{url_for('UXIX')}}">UX/UI</a><br>
+                            <a href="{{url_for('jobs')}}">ALL JOBS</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><p>Showing results for <b>Network</b>.</p>
+
+            <div class="post">
+                <div class="post-author">
+                    <img src="static/images\hp.jpeg">
+                    <div>
+                        <h1>Hari Murali</h1>
+                        <small>Executve Director at Kurinji Groups | ConnectX Solutions</small>
+                        <small>23 hours ago</small>
+                    </div>
+                </div>
+                <p>
+                    Job Openings at <b> ConnectX Solutions </b>for Network Engineer<br>
+                    <br>
+                    <b>DESCRIPTION: </b>Design, implement, and optimize network infrastructure, working closely with cross-functional teams to ensure seamless connectivity and performance.
+                </p>
+                    <p><a href = "job1.html">Apply Now</a></p>
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="static/images/thumbsup.png" >
+                        <img src="static/images/love.png" >
+                        <img src="static/images/clap.png" >
+                        <span class="liked-users">Joes Johmson and 66 others</span>
+                    </div>
+                    <div>
+                        <span>13 comments &middot; 15 shares</span>
+                    </div>
+
+                </div>
+
+                    <div class="post-activity">
+                        <div>
+                            <img src="static/images\Harish Kumar.jpeg" class="post-activity-user-icon">
+                            <img src="static/images/down-arrow.png" class="post-activity-arrow-icon"> 
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+                
+            </div>
+            
+            <div class="post">
+                <div class="post-author">
+                    <img src="static/images\roxx.jpeg">
+                    <div>
+                        <h1>Tommy Nathan</h1>
+                        <small>Founder and CEO AT 403 Groups | NetworkNex Technologies</small>
+                        <small> 59 min ago</small>
+                    </div>
+                </div>
+                <p>
+                    Job Openings at <b> NetworkNex Technologies </b>for Network Administrator<br>
+                    <br>
+                    <b>DESCRIPTION: </b>Manage and optimize network systems, collaborating with teams to ensure secure and efficient networking solutions.
+                </p>
+                    <p><a href = "job1.html">Apply Now</a></p>
+                
+                <div class="post-stats">
+                    <div>
+                        <img src="static/images/thumbsup.png" >
+                        <img src="static/images/love.png" >
+                        <img src="static/images/clap.png" >
+                        <span class="liked-users">Giridhara Vijay and 123 others</span>
+                    </div>
+                    <div>
+                        <span>12 comments &middot; 12 shares</span>
+                    </div>
+
+                </div>
+
+                    <div class="post-activity">
+                        <div>
+                            <img src="static/images\Harish Kumar.jpeg" class="post-activity-user-icon">
+                            <img src="static/images/down-arrow.png" class="post-activity-arrow-icon"> 
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/like.png">
+                            <span>Like</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/comment.png">
+                            <span>Comment</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/share.png">
+                            <span>Share</span>
+                        </div>
+                        <div class="post-activity-link">
+                            <img src="static/images/send.png">
+                            <span>Send</span>
+                        </div>
+                    </div>
+                
+            </div>
+
+
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-news">
+                <img src="static/images/more.png" class="info-icon">
+                <h3>Trending News</h3>
+                <a href="#">High demand for skilled manpower</a>
+                <span>1d ago &middot; 10,934 readers</span>
+
+                <a href="#">Careers growing horizontally too</a>
+                <span>19h ago &middot; 1,552 readers</span>
+
+                <a href="#">Less work visa for US,more for UK</a>
+                <span>1d ago &middot; 27,290 readers</span>
+
+                <a href="#">More hiring = higher confidence?</a>
+                <span>18h ago &middot; 8,934 readers</span>
+
+                <a href="#">Gautham Adani is the world's third richest</a>
+                <span>12h ago &middot; 4,205 readers</span>
+
+                <a href="#" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principles of web design</p>
+                <div>
+                    <img src="static/images\Harish Kumar.jpeg">
+                    <img src="static/images/mi-logo.png">
+                </div>
+                <b>Brand and Demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>      
+
+            <div class="sidebar-useful-links">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Advertising</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+
+                <div class="copyright-msg">
+                    <img src = "static/images\logo.png">
+                    <p>Career Connect &#169; 2023. All right reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .dropdown-container {
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+    <script>
+        let profileMenu=document.getElementById("profileMenu");
+        function toggleMenu(){
+            profileMenu.classList.toggle("open-menu")
+        }
+    </script>
+
+</body>
+</html>

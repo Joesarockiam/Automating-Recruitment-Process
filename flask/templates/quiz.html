@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Technologies Recruitment Quiz</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 220vh;
+    }
+
+    #header {
+      margin-bottom: 20px;
+    }
+
+    #header img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #header h1 {
+      margin: 10px 0 0;
+    }
+
+    #quiz-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #777;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id="quiz-container">
+        <div id="header">
+            <img src="https://visitalgomawi.com/wp-content/uploads/2022/09/8093_Quantum-Technologies.png" alt="Quantum Technologies Image">
+        </div>
+        <div class="disclaimer" style="font-size: larger;">
+            <p>Dear Candidates,</p>
+            <p>As part of our recruitment process, you'll undergo a quiz assessing your skills. We value transparency; please answer truthfully. Information provided will be used exclusively for evaluating your candidacy, treated confidentially, and not disclosed without consent. Deliberate misrepresentation may impact your assessment. For queries, contact our recruitment team. Thank you for your cooperation.</p>
+            <p>Sincerely,</p>
+            <p>Quantum Technologies, Recruitment Team</p>
+        </div>
+    
+        <div class="question" id="question1">
+            <p>1. What is the primary purpose of exploratory data analysis (EDA)?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A) To build predictive models</label>
+                <label><input type="radio" name="q1" value="B"> B) To summarize data and uncover patterns</label>
+                <label><input type="radio" name="q1" value="C"> C) To validate hypotheses</label>
+                <label><input type="radio" name="q1" value="D"> D) To create visualizations for presentations</label>
+            </div>
+        </div>
+
+        <div class="question" id="question2">
+            <p>2. In statistics, what does the term "p-value" represent?</p>
+            <div class="options">
+              <label><input type="radio" name="q2" value="A"> A) The probability of making a Type II error</label>
+              <label><input type="radio" name="q2" value="B"> B) The probability of observing the given data, assuming the null hypothesis is true</label>
+              <label><input type="radio" name="q2" value="C"> C) The strength of correlation between two variables</label>
+              <label><input type="radio" name="q2" value="D"> D) The margin of error in a confidence interval</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question3">
+            <p>3. Which of the following is a common technique for handling missing data in a dataset?</p>
+            <div class="options">
+              <label><input type="radio" name="q3" value="A"> A) Deleting the entire row with missing data</label>
+              <label><input type="radio" name="q3" value="B"> B) Replacing missing values with the mean of the variable</label>
+              <label><input type="radio" name="q3" value="C"> C) Ignoring missing data during analysis</label>
+              <label><input type="radio" name="q3" value="D"> D) Interpolating missing values based on neighboring observations</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question4">
+            <p>4. What is the purpose of a "boxplot" in data visualization?</p>
+            <div class="options">
+              <label><input type="radio" name="q4" value="A"> A) To show the distribution of a dataset</label>
+              <label><input type="radio" name="q4" value="B"> B) To display the central tendency of data</label>
+              <label><input type="radio" name="q4" value="C"> C) To identify outliers in a dataset</label>
+              <label><input type="radio" name="q4" value="D"> D) To compare the means of multiple groups</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question5">
+            <p>5. What is the main function of a "pivot table" in data analysis?</p>
+            <div class="options">
+              <label><input type="radio" name="q5" value="A"> A) To create summary statistics for a dataset</label>
+              <label><input type="radio" name="q5" value="B"> B) To filter and sort data based on specific criteria</label>
+              <label><input type="radio" name="q5" value="C"> C) To transform long-format data into wide-format</label>
+              <label><input type="radio" name="q5" value="D"> D) To perform regression analysis</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question6">
+            <p>6. Which statistical test is appropriate for comparing the means of two independent groups?</p>
+            <div class="options">
+              <label><input type="radio" name="q6" value="A"> A) Paired t-test</label>
+              <label><input type="radio" name="q6" value="B"> B) ANOVA</label>
+              <label><input type="radio" name="q6" value="C"> C) Chi-square test</label>
+              <label><input type="radio" name="q6" value="D"> D) Independent samples t-test</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question7">
+            <p>7. What is the purpose of the term "Normalization" in the context of databases?</p>
+            <div class="options">
+              <label><input type="radio" name="q7" value="A"> A) To organize data into tables</label>
+              <label><input type="radio" name="q7" value="B"> B) To reduce redundancy in a database</label>
+              <label><input type="radio" name="q7" value="C"> C) To ensure data consistency</label>
+              <label><input type="radio" name="q7" value="D"> D) To scale numerical values to a standard range</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question8">
+            <p>8. What does the term "correlation coefficient" measure in statistics?</p>
+            <div class="options">
+              <label><input type="radio" name="q8" value="A"> A) The strength and direction of a linear relationship between two variables</label>
+              <label><input type="radio" name="q8" value="B"> B) The probability of an event occurring</label>
+              <label><input type="radio" name="q8" value="C"> C) The spread of values in a dataset</label>
+              <label><input type="radio" name="q8" value="D"> D) The mean of a distribution</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question9">
+            <p>9. In machine learning, what is the purpose of a "confusion matrix"?</p>
+            <div class="options">
+              <label><input type="radio" name="q9" value="A"> A) To visualize the distribution of data</label>
+              <label><input type="radio" name="q9" value="B"> B) To evaluate the performance of a classification model</label>
+              <label><input type="radio" name="q9" value="C"> C) To assess the normality of a dataset</label>
+              <label><input type="radio" name="q9" value="D"> D) To identify outliers in a feature space</label>
+            </div>
+        </div>
+        
+        <div class="question" id="question10">
+            <p>10. What is the significance of the term "Big Data" in the context of data analysis?</p>
+            <div class="options">
+              <label><input type="radio" name="q10" value="A"> A) It refers to datasets that are too large to be processed using traditional methods</label>
+              <label><input type="radio" name="q10" value="B"> B) It indicates data with high accuracy and precision</label>
+              <label><input type="radio" name="q10" value="C"> C) It represents data collected from social media platforms only</label>
+              <label><input type="radio" name="q10" value="D"> D) It denotes datasets with a small number of variables</label>
+            </div>
+        </div>
+        
+  <button onclick="submitQuiz()">Submit Quiz</button>
+  <div id="result"></div>
+</div>
+
+<script>
+    function submitQuiz() {
+      // Get user answers
+      const answer1 = document.querySelector('input[name="q1"]:checked').value;
+      const answer2 = document.querySelector('input[name="q2"]:checked').value;
+      const answer3 = document.querySelector('input[name="q3"]:checked').value;
+      const answer4 = document.querySelector('input[name="q4"]:checked').value;
+      const answer5 = document.querySelector('input[name="q5"]:checked').value;
+      const answer6 = document.querySelector('input[name="q6"]:checked').value;
+      const answer7 = document.querySelector('input[name="q7"]:checked').value;
+      const answer8 = document.querySelector('input[name="q8"]:checked').value;
+      const answer9 = document.querySelector('input[name="q9"]:checked').value;
+      const answer10 = document.querySelector('input[name="q10"]:checked').value;
+  
+      // Check answers
+      const correctAnswers = {
+        q1: 'B',
+        q2: 'B',
+        q3: 'D',
+        q4: 'C',
+        q5: 'C',
+        q6: 'D',
+        q7: 'D',
+        q8: 'A',
+        q9: 'B',
+        q10: 'A',
+        // Add more correct answers here
+      };
+  
+      let score = 0;
+  
+      if (answer1 === correctAnswers.q1) score++;
+      if (answer2 === correctAnswers.q2) score++;
+      if (answer3 === correctAnswers.q3) score++;
+      if (answer4 === correctAnswers.q4) score++;
+      if (answer5 === correctAnswers.q5) score++;
+      if (answer6 === correctAnswers.q6) score++;
+      if (answer7 === correctAnswers.q7) score++;
+      if (answer8 === correctAnswers.q8) score++;
+      if (answer9 === correctAnswers.q9) score++;
+      if (answer10 === correctAnswers.q10) score++;
+  
+      // Display result
+      const resultElement = document.getElementById('result');
+      resultElement.textContent = `Your score: ${score} out of ${Object.keys(correctAnswers).length}`;
+    }
+  </script>
+  
+
+</body>
+</html>
