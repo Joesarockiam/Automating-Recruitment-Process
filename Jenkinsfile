@@ -2,64 +2,46 @@ pipeline {
     agent any
 
     environment {
-        REGISTRY = "docker.io/joesarockiam"
-        IMAGE_NAME = "automating-recruitment"
-        IMAGE_TAG = "${BUILD_NUMBER}"
-        FULL_IMAGE = "${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
-        REGISTRY_CREDENTIALS = "docker-hub-credentials" // Docker Hub credentials ID
+        VENV = "${WORKSPACE}/venv"
+        IMAGE_NAME = "automating-recruitment:local"
     }
 
     stages {
-        stage('Checkout') {
+
+        stage('Checkout SCM') {
             steps {
                 checkout scm
             }
         }
 
         stage('Install Dependencies') {
-             steps {
-                   bat 'python -m venv venv'
-                   bat 'venv\\Scripts\\python.exe -m pip install --upgrade pip'
-                   bat 'venv\\Scripts\\pip install -r requirements.txt'
+            steps {
+                bat "python -m venv %VENV%"
+                bat "%VENV%\\Scripts\\python.exe -m pip install --upgrade pip"
+                bat "%VENV%\\Scripts\\pip install -r requirements.txt"
             }
         }
 
-
         stage('Run Tests') {
             steps {
-                // Only if you have tests, otherwise skip
-                // bat 'venv\\Scripts\\pytest'
                 echo "No tests to run"
-
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    docker.build("${FULL_IMAGE}", ".")
-                }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    docker.withRegistry("https://${REGISTRY}", "${REGISTRY_CREDENTIALS}") {
-                        docker.image("${FULL_IMAGE}").push()
-                        docker.image("${FULL_IMAGE}").push("latest")
-                    }
-                }
+                // Build locally and keep image on host
+                bat "docker build --load -t %IMAGE_NAME% ."
             }
         }
     }
 
     post {
         success {
-            echo "✅ Build & Docker Push successful!"
+            echo "Build and Docker image creation successful!"
         }
         failure {
-            echo "❌ Build failed!"
+            echo "Build failed!"
         }
     }
 }
