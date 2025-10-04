@@ -30,6 +30,8 @@ pipeline {
                 // Only if you have tests, otherwise skip
                 // bat 'venv\\Scripts\\pytest'
                 echo "No tests to run"
+                bat 'venv\\Scripts\\pytest'
+
             }
         }
 
